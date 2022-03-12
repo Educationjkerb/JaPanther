@@ -1,0 +1,18 @@
+from library import random
+includes:
+     random.int
+setup(.end)
+
+start(/Part 1/)
+set var a = random.int/1, 100, 1/
+set var ans = ask: /Please make a guess here     <nr>/
+
+retill a = ans:
+     if a == ans:
+          text: /You Win!/
+     elif a >> ans:
+          text: /Your number is greater than mine/
+     else:
+          text: /Your number is smaller than mine./
+
+end(/Part 1/)
